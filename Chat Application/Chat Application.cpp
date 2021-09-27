@@ -11,7 +11,7 @@ using namespace::std;
 void main()
 {
 	printf("gi");
-    cout << "Hello World  !!\n";
+	cout << "Hello World  !!\n";
 	//initialize winsock = windows socket
 	WSADATA wsData;
 	//The MAKEWORD(2,2) parameter of WSAStartup makes a request for version 2.2
