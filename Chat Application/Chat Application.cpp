@@ -128,7 +128,7 @@ void main()
 	WSACleanup();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Run program: Ctrl + F5 or Debug > Start Without Debugging me nu
 // Debug program: F5 or Debug > Start Debugging menu
 
 // Tips for Getting Started: 
