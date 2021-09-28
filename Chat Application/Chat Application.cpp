@@ -2,6 +2,7 @@
 
 #include "pch.h"
 #include <iostream>
+#include <string>
 #include <WS2tcpip.h> //windows sockets uses this api to access the network
 //it includes winsock network
 #pragma comment (lib, "ws2_32.lib") //tells the linker to add the 'libname' library to the list
@@ -108,6 +109,10 @@ void main()
 			cerr << "Error in recv(). Quitting" << endl;
 			break;
 		}
+		if (byteReceived > 0)
+		{
+			cout << "SERVER> " << string(buf, 0, byteReceived) << endl;
+		}
 
 		if (byteReceived == 0)
 		{
@@ -117,7 +122,8 @@ void main()
 
 		//echo message back to client
 
-		send(clientSocket, buf, byteReceived + 1, 0);
+		int sendResult = send(clientSocket, buf, byteReceived + 1, 0);
+		
 
 	}
 
